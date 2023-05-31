@@ -1,0 +1,21 @@
+﻿@model double
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Subiendo archivos grandes</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="archivo" id="archivo" />
+        <div class="mt-3">
+            <button class="btn btn-primary" type="submit">Enviar</button>
+        </div>
+    </form>
+
+</div>
+
+@if (Model > 0)
+{
+    <p>El tamaño del archivo es @Model.ToString("N") megas.</p>
+}
